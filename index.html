@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="practiceApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+  </head>
+  <body ng-controller="mainCtrl">
+
+{{test}}
+<!-- this will instanttly be displayed when you directly call the variable with thedobule brackets -->
+
+<input type="text" ng-model="test">
+
+<button ng-click="checktest()">Check Test</button>
+
+
+<div ng-repeat="thing in data">
+  <!-- thing is just a singular index, it will repeat through the entire index, thing results in an entrie object when ran through so we soecified thing.name  -->
+  <!-- thing is arbitrary, data is only used with scope for an array, inside the div that we have the thing in it represents a single object, if we didnt put the .name after the thing it would ouput the entire form that it looks like in the mainCtrl page -->
+  <h1> Name: {{thing.name}}</h1>
+  <h3>Hobby: {{thing.hobby}}</h3>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="mainServ.js"></script>
+
+  </body>
+</html>
